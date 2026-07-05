@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas Seguras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🔒 Gerador de Senhas Seguras</h1>
+
+    <p class="descricao">
+        Utilize a matemática para criar senhas mais fortes e proteger seus dados.
+    </p>
+
+    <div class="opcoes">
+
+        <label>Tamanho da senha</label>
+
+        <input
+        type="range"
+        id="tamanho"
+        min="8"
+        max="20"
+        value="12">
+
+        <span id="valorTamanho">12</span>
+
+        <label>
+            <input type="checkbox" id="maiusculas" checked>
+            Letras Maiúsculas
+        </label>
+
+        <label>
+            <input type="checkbox" id="minusculas" checked>
+            Letras Minúsculas
+        </label>
+
+        <label>
+            <input type="checkbox" id="numeros" checked>
+            Números
+        </label>
+
+        <label>
+            <input type="checkbox" id="simbolos" checked>
+            Símbolos
+        </label>
+
+    </div>
+
+    <button onclick="gerarSenha()">
+        Gerar Senha
+    </button>
+
+    <div class="resultado">
+
+        <input
+        type="text"
+        id="senha"
+        readonly>
+
+        <button onclick="copiarSenha()">
+            Copiar
+        </button>
+
+    </div>
+
+    <div id="forca" class="forca"></div>
+
+    <div class="matematica">
+
+        <h2>Como a matemática ajuda?</h2>
+
+        <p>
+            Quanto maior o número de caracteres e o tamanho da senha,
+            maior será a quantidade de combinações possíveis.
+        </p>
+
+        <p id="combinacoes"></p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
